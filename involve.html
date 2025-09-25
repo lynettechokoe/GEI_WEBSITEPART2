@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find opportunities to volunteer with Green Earth Initiative. Join our upcoming events and make a difference in your community.">
+    <title>Get Involved | Green Earth Initiative</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <h1>Green Earth Initiative</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="involve.html">Get Involved</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get Involved</h1>
+                <p>Join our community of volunteers and make a tangible impact on the environment.</p>
+            </div>
+        </section>
+
+        <section class="volunteer-opportunities">
+            <div class="container">
+                <h2>Volunteer Opportunities</h2>
+                <div class="opportunities-grid">
+                    <div class="opportunity">
+                        <h3>Tree Planting</h3>
+                        <p>Join our reforestation efforts every Saturday morning. No experience needed!</p>
+                    </div>
+                    <div class="opportunity">
+                        <h3>Beach Cleanups</h3>
+                        <p>Help keep our coastlines clean. Monthly events in Cape Town, Durban, and Gqeberha.</p>
+                    </div>
+                    <div class="opportunity">
+                        <h3>Environmental Education</h3>
+                        <p>Assist with our school programs and community workshops.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-form">
+            <div class="container">
+                <h2>Become a Volunteer</h2>
+                <form id="volunteerForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <select id="interest" name="interest">
+                            <option value="">Please select</option>
+                            <option value="tree-planting">Tree Planting</option>
+                            <option value="beach-cleanup">Beach Cleanup</option>
+                            <option value="education">Environmental Education</option>
+                            <option value="fundraising">Fundraising</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Why do you want to volunteer with us?</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Green Earth Initiative. All rights reserved.</p>
+            <p>Building a greener future, together.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Green Earth Initiative. Find our office locations and contact form.">
+    <title>Contact Us | Green Earth Initiative</title>
+   <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <h1>Green Earth Initiative</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="involve.html">Get Involved</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Reach out with questions, ideas, or to get involved.</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <h2>Our Offices</h2>
+                <div class="office-grid">
+                    <div class="office">
+                        <h3>Cape Town Headquarters</h3>
+                        <p>123 Conservation Road<br>Table View, Cape Town<br>7441</p>
+                        <p>Phone: +27 21 123 4567</p>
+                        <p>Email: capetown@greenearth.org.za</p>
+                    </div>
+                    <div class="office">
+                        <h3>Johannesburg Office</h3>
+                        <p>45 Green Street<br>Parktown, Johannesburg<br>2193</p>
+                        <p>Phone: +27 11 234 5678</p>
+                        <p>Email: johannesburg@greenearth.org.za</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <h2>Find Us</h2>
+                <div class="map-placeholder">
+                    <p>Map will be embedded here showing both office locations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Full Name *</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="contactSubject">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Green Earth Initiative. All rights reserved.</p>
+            <p>Building a greener future, together.</p>
+        </div>
+    </footer>
+
+   <script src="js/script.js"></script>
+</body>
+</html>

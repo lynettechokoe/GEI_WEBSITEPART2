@@ -3,81 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Green Earth Initiative - Leading the fight for a sustainable future through community action, education, and conservation.">
+    <meta name="description" content="Green Earth Initiative - Leading environmental conservation through community action, education, and volunteer programs.">
+    <meta name="keywords" content="environment, conservation, volunteer, tree planting, beach cleanup, donate, eco-friendly">
     <title>Green Earth Initiative | Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <h1>Green Earth Initiative</h1>
-            </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Green Earth Initiative</a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About_Us</a></li>
-                    <li><a href="involve.html">Get_Involved</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="involve.html">Get Involved</a></li>
                     <li><a href="donate.html">Donate</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Protect Our Planet Today</h2>
-                <p>Join thousands of volunteers making a direct impact on environmental conservation across South Africa.</p>
-                <div class="cta-buttons">
-                    <a href="involve.html" class="btn btn-primary">Become a Volunteer</a>
-                    <a href="donate.html" class="btn btn-secondary">Make a Donation</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Protect Our Planet Today</h1>
+            <p>Join thousands of volunteers making a direct impact on environmental conservation across South Africa.</p>
+            <div class="cta-buttons">
+                <a href="involve.html" class="btn btn-primary">Become a Volunteer</a>
+                <a href="donate.html" class="btn btn-secondary">Make a Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>5,000+</h3>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="stat">
+                    <h3>2,500+</h3>
+                    <p>Volunteers</p>
+                </div>
+                <div class="stat">
+                    <h3>120+</h3>
+                    <p>Community Projects</p>
+                </div>
+                <div class="stat">
+                    <h3>R350k+</h3>
+                    <p>Funds Raised</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="impact-stats">
-            <div class="container">
-                <h2>Our Impact</h2>
-                <div class="stats-grid">
-                    <div class="stat">
-                        <h3>5,000+</h3>
-                        <p>Trees Planted</p>
-                    </div>
-                    <div class="stat">
-                        <h3>2,500+</h3>
-                        <p>Volunteers</p>
-                    </div>
-                    <div class="stat">
-                        <h3>120+</h3>
-                        <p>Community Projects</p>
-                    </div>
-                    <div class="stat">
-                        <h3>R350k+</h3>
-                        <p>Funds Raised</p>
-                    </div>
+    <!-- Mission Section -->
+    <section class="mission-preview">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>The Green Earth Initiative is dedicated to preserving South Africa's natural heritage through hands-on conservation projects, environmental education, and community empowerment. We believe in creating a sustainable future through actionable solutions and collective effort.</p>
+            <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Our Work in Action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/tree-planting.jpg" alt="Volunteers planting trees" class="gallery-image" data-src="images/tree-planting.jpg">
+                    <div class="gallery-caption">Tree Planting Initiative</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/beach-cleanup.jpg" alt="Beach cleanup volunteers" class="gallery-image" data-src="images/beach-cleanup.jpg">
+                    <div class="gallery-caption">Beach Cleanup Program</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/education.jpg" alt="Environmental education workshop" class="gallery-image" data-src="images/education.jpg">
+                    <div class="gallery-caption">Education Workshops</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="mission-preview">
-            <div class="container">
-                <h2>Our Mission</h2>
-                <p>The Green Earth Initiative is dedicated to preserving South Africa's natural heritage through hands-on conservation projects, <br>
-                    environmental education, and community empowerment. We believe in creating a sustainable future through actionable solutions and collective effort.</p>
-                <a href="about.html" class="btn btn-outline">Learn More About Us</a>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Green Earth Initiative. All rights reserved.</p>
             <p>Building a greener future, together.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        
+        <div class="cart-total" id="cart-total">
+            Total: R0.00
+        </div>
+        
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-modal-content">
+            <input type="text" placeholder="Search our website..." id="search-input">
+            <button class="search-close" id="search-close">&times;</button>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

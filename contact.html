@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch with Green Earth Initiative. Find our office locations and contact form.">
+    <meta name="keywords" content="contact, email, phone, location, get in touch, inquiry">
     <title>Contact Us | Green Earth Initiative</title>
-   <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <h1>Green Earth Initiative</h1>
-            </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Green Earth Initiative</a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,6 +26,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -39,52 +50,104 @@
                 <h2>Our Offices</h2>
                 <div class="office-grid">
                     <div class="office">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
                         <h3>Cape Town Headquarters</h3>
-                        <p>123 Conservation Road<br>Table View, Cape Town<br>7441</p>
-                        <p>Phone: +27 21 123 4567</p>
-                        <p>Email: capetown@greenearth.org.za</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Conservation Road, Table View, Cape Town, 7441</p>
+                        <p><i class="fas fa-phone"></i> +27 21 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> capetown@greenearth.org.za</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday, 8:30 AM - 5:00 PM</p>
                     </div>
                     <div class="office">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
                         <h3>Johannesburg Office</h3>
-                        <p>45 Green Street<br>Parktown, Johannesburg<br>2193</p>
-                        <p>Phone: +27 11 234 5678</p>
-                        <p>Email: johannesburg@greenearth.org.za</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 45 Green Street, Parktown, Johannesburg, 2193</p>
+                        <p><i class="fas fa-phone"></i> +27 11 234 5678</p>
+                        <p><i class="fas fa-envelope"></i> johannesburg@greenearth.org.za</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday, 9:00 AM - 4:00 PM</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="map">
+        <section class="emergency-contact">
             <div class="container">
-                <h2>Find Us</h2>
-                <div class="map-placeholder">
-                    <p>Map will be embedded here showing both office locations.</p>
+                <div class="emergency-banner">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h3>Environmental Emergency?</h3>
+                        <p>For urgent environmental concerns (pollution, wildlife emergencies, etc.), call our hotline: <strong>+27 21 987 6543</strong></p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-form">
+        <section class="contact-form-section">
             <div class="container">
                 <h2>Send us a Message</h2>
-                <form id="contactForm">
+                <form id="contactForm" novalidate>
                     <div class="form-group">
                         <label for="contactName">Full Name *</label>
-                        <input type="text" id="contactName" name="contactName" required>
+                        <input type="text" id="contactName" name="contactName" required minlength="2" placeholder="Your full name">
                     </div>
                     <div class="form-group">
                         <label for="contactEmail">Email Address *</label>
-                        <input type="email" id="contactEmail" name="contactEmail" required>
+                        <input type="email" id="contactEmail" name="contactEmail" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="contactSubject">Subject</label>
-                        <input type="text" id="contactSubject" name="contactSubject">
+                        <label for="contactPhone">Phone Number</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" pattern="[0-9\s\-\(\)]+" placeholder="071 234 5678">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" name="contactSubject" required>
+                            <option value="">Please select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="volunteer">Volunteer Information</option>
+                            <option value="donation">Donation Question</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="contactMessage">Message *</label>
-                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        <textarea id="contactMessage" name="contactMessage" rows="6" required minlength="10" placeholder="Please type your detailed message here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for updates and events
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+            </div>
+        </section>
+
+        <section class="faq-preview">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How can I become a regular volunteer?</h3>
+                        <p>Fill out our volunteer form above, and our team will contact you within 48 hours to discuss ongoing opportunities.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer school presentations?</h3>
+                        <p>Yes! We offer free environmental education workshops for schools. Contact our education coordinator.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I organize a cleanup in my area?</h3>
+                        <p>Absolutely! We support community-led initiatives. Contact us for resources and guidance.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -96,6 +159,6 @@
         </div>
     </footer>
 
-   <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

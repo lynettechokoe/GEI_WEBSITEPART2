@@ -1,19 +1,22 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find opportunities to volunteer with Green Earth Initiative. Join our upcoming events and make a difference in your community.">
+    <meta name="keywords" content="volunteer, get involved, tree planting, beach cleanup, environmental events, community service">
     <title>Get Involved | Green Earth Initiative</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <h1>Green Earth Initiative</h1>
-            </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Green Earth Initiative</a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,6 +26,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -39,16 +50,72 @@
                 <h2>Volunteer Opportunities</h2>
                 <div class="opportunities-grid">
                     <div class="opportunity">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
                         <h3>Tree Planting</h3>
-                        <p>Join our reforestation efforts every Saturday morning. No experience needed!</p>
+                        <p>Join our reforestation efforts every Saturday morning. No experience needed - we provide all tools and training!</p>
+                        <ul>
+                            <li><strong>When:</strong> Saturdays, 8:00 AM - 12:00 PM</li>
+                            <li><strong>Where:</strong> Various locations in Cape Town and Johannesburg</li>
+                            <li><strong>Commitment:</strong> Flexible - come when you can</li>
+                        </ul>
                     </div>
                     <div class="opportunity">
-                        <h3>Beach Cleanups</h3>
-                        <p>Help keep our coastlines clean. Monthly events in Cape Town, Durban, and Gqeberha.</p>
+                        <div class="opportunity-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Beach & River Cleanups</h3>
+                        <p>Help us tackle plastic pollution at its source. Monthly events across multiple locations.</p>
+                        <ul>
+                            <li><strong>When:</strong> First Saturday of each month</li>
+                            <li><strong>Where:</strong> Cape Town, Durban, and Gqeberha beaches</li>
+                            <li><strong>Provided:</strong> Gloves, bags, and cleaning equipment</li>
+                        </ul>
                     </div>
                     <div class="opportunity">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
                         <h3>Environmental Education</h3>
-                        <p>Assist with our school programs and community workshops.</p>
+                        <p>Assist with our school programs and community workshops. Perfect for those who love teaching.</p>
+                        <ul>
+                            <li><strong>When:</strong> Weekdays during school hours</li>
+                            <li><strong>Where:</strong> Local schools and community centers</li>
+                            <li><strong>Training:</strong> Provided for all volunteers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Community Tree Planting</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Table View, Cape Town</p>
+                            <p><i class="fas fa-clock"></i> 8:00 AM - 12:00 PM</p>
+                        </div>
+                        <button class="btn btn-outline">Register</button>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Beach Cleanup Drive</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Muizenberg Beach, Cape Town</p>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 1:00 PM</p>
+                        </div>
+                        <button class="btn btn-outline">Register</button>
                     </div>
                 </div>
             </div>
@@ -57,33 +124,48 @@
         <section class="volunteer-form">
             <div class="container">
                 <h2>Become a Volunteer</h2>
-                <form id="volunteerForm">
+                <form id="volunteerForm" novalidate>
                     <div class="form-group">
                         <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                        <input type="text" id="fullName" name="fullName" required minlength="2" placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9\s\-\(\)]+" minlength="10" placeholder="071 234 5678">
                     </div>
                     <div class="form-group">
-                        <label for="interest">Area of Interest</label>
-                        <select id="interest" name="interest">
+                        <label for="interest">Area of Interest *</label>
+                        <select id="interest" name="interest" required>
                             <option value="">Please select</option>
                             <option value="tree-planting">Tree Planting</option>
                             <option value="beach-cleanup">Beach Cleanup</option>
                             <option value="education">Environmental Education</option>
                             <option value="fundraising">Fundraising</option>
+                            <option value="administration">Administration</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Why do you want to volunteer with us?</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
+                        <label for="availability">Availability</label>
+                        <select id="availability" name="availability">
+                            <option value="">Select your availability</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="both">Both weekends and weekdays</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Previous Experience (if any)</label>
+                        <textarea id="experience" name="experience" rows="3" placeholder="Tell us about any relevant experience you have..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Why do you want to volunteer with us? *</label>
+                        <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Please share your motivation for joining Green Earth Initiative..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit Application</button>
                 </form>

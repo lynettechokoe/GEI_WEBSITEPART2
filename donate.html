@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Support Green Earth Initiative's conservation work. Your donation helps fund tree planting, cleanups, and environmental education programs.">
+    <meta name="keywords" content="donate, support, fund, contribute, charity, environmental donation">
     <title>Donate | Green Earth Initiative</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <h1>Green Earth Initiative</h1>
-            </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Green Earth Initiative</a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,68 +26,17 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </header>
- <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Support Our Mission</h1>
-                <p>Your donation directly funds our conservation projects and educational programs.</p>
-            </div>
-        </section>
 
-        <section class="donation-impact">
-            <div class="container">
-                <h2>What Your Donation Supports</h2>
-                <div class="impact-grid">
-                    <div class="impact-item">
-                        <h3>R100</h3>
-                        <p>Plants 5 native trees</p>
-                    </div>
-                    <div class="impact-item">
-                        <h3>R250</h3>
-                        <p>Funds a cleanup kit for 10 volunteers</p>
-                        </div>
-                    <div class="impact-item">
-                        <h3>R500</h3>
-                        <p>Supports a school workshop</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="donation-form">
-            <div class="container">
-                <h2>Make a Donation</h2>
-                <form id="donationForm">
-                    <div class="form-group">
-                        <label for="donationAmount">Donation Amount (ZAR) *</label>
-                        <input type="number" id="donationAmount" name="donationAmount" min="10" required>
-                         </div>
-                    <div class="form-group">
-                        <label for="donationType">Donation Type</label>
-                        <select id="donationType" name="donationType">
-                            <option value="one-time">One-time</option>
-                            <option value="monthly">Monthly</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="donorName">Full Name *</label>
-                        <input type="text" id="donorName" name="donorName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="donorEmail">Email Address *</label>
-                        <input type="email" id="donorEmail" name="donorEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <p>We use secure encryption for all transactions. Your financial information is protected.</p>
- </div>
-                    <button type="submit" class="btn btn-primary">Donate Now</button>
-                </form>
-            </div>
-        </section>
-
-           
     <main>
         <section class="page-header">
             <div class="container">
@@ -98,49 +50,149 @@
                 <h2>What Your Donation Supports</h2>
                 <div class="impact-grid">
                     <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
                         <h3>R100</h3>
-                        <p>Plants 5 native trees</p>
+                        <p>Plants 5 native trees including maintenance</p>
                     </div>
                     <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-trash-restore"></i>
+                        </div>
                         <h3>R250</h3>
                         <p>Funds a cleanup kit for 10 volunteers</p>
                     </div>
                     <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
                         <h3>R500</h3>
-                        <p>Supports a school workshop</p>
+                        <p>Supports an environmental workshop for 30 students</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3>R1,000</h3>
+                        <p>Maintains a hectare of restored land for one year</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="donation-form">
+        <section class="donation-options">
+            <div class="container">
+                <h2>Ways to Give</h2>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>One-Time Donation</h3>
+                        <p>Make a single donation to support our current projects and urgent needs.</p>
+                        <button class="btn btn-outline" data-amount="500">Donate Once</button>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Monthly Support</h3>
+                        <p>Become a sustaining member with automatic monthly donations.</p>
+                        <button class="btn btn-outline" data-amount="100">Monthly</button>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Corporate Partnership</h3>
+                        <p>Explore sponsorship opportunities for businesses and organizations.</p>
+                        <a href="contact.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-form-section">
             <div class="container">
                 <h2>Make a Donation</h2>
-                <form id="donationForm">
+                <form id="donationForm" novalidate>
                     <div class="form-group">
                         <label for="donationAmount">Donation Amount (ZAR) *</label>
-                        <input type="number" id="donationAmount" name="donationAmount" min="10" required>
+                        <div class="amount-buttons">
+                            <button type="button" class="amount-btn" data-amount="100">R100</button>
+                            <button type="button" class="amount-btn" data-amount="250">R250</button>
+                            <button type="button" class="amount-btn" data-amount="500">R500</button>
+                            <button type="button" class="amount-btn" data-amount="1000">R1,000</button>
+                        </div>
+                        <input type="number" id="donationAmount" name="donationAmount" min="10" required placeholder="Or enter custom amount">
                     </div>
                     <div class="form-group">
-                        <label for="donationType">Donation Type</label>
-                        <select id="donationType" name="donationType">
-                            <option value="one-time">One-time</option>
-                            <option value="monthly">Monthly</option>
+                        <label for="donationType">Donation Type *</label>
+                        <select id="donationType" name="donationType" required>
+                            <option value="">Select donation type</option>
+                            <option value="one-time">One-time donation</option>
+                            <option value="monthly">Monthly recurring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donationPurpose">Purpose (Optional)</label>
+                        <select id="donationPurpose" name="donationPurpose">
+                            <option value="">Where needed most</option>
+                            <option value="tree-planting">Tree Planting Program</option>
+                            <option value="cleanup">Beach & River Cleanups</option>
+                            <option value="education">Environmental Education</option>
+                            <option value="general">General Operations</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="donorName">Full Name *</label>
-                        <input type="text" id="donorName" name="donorName" required>
+                        <input type="text" id="donorName" name="donorName" required minlength="2" placeholder="Your full name">
                     </div>
                     <div class="form-group">
                         <label for="donorEmail">Email Address *</label>
-                        <input type="email" id="donorEmail" name="donorEmail" required>
+                        <input type="email" id="donorEmail" name="donorEmail" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
-                        <p>We use secure encryption for all transactions. Your financial information is protected.</p>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="taxCertificate" name="taxCertificate">
+                            <span class="checkmark"></span>
+                            I would like to receive a Section 18A tax certificate
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="anonymous" name="anonymous">
+                            <span class="checkmark"></span>
+                            I would like to remain anonymous
+                        </label>
+                    </div>
+                    <div class="security-notice">
+                        <i class="fas fa-lock"></i>
+                        <p>Your donation is secure and encrypted. We never store your payment details.</p>
                     </div>
                     <button type="submit" class="btn btn-primary">Donate Now</button>
                 </form>
+            </div>
+        </section>
+
+        <section class="transparency">
+            <div class="container">
+                <h2>Transparency & Impact</h2>
+                <div class="transparency-grid">
+                    <div class="transparency-item">
+                        <h3>Financial Accountability</h3>
+                        <p>We are a registered NPO (NPO #123-456) and provide annual financial reports to all donors.</p>
+                    </div>
+                    <div class="transparency-item">
+                        <h3>Impact Reporting</h3>
+                        <p>Receive regular updates on how your donation is making a difference in our communities.</p>
+                    </div>
+                    <div class="transparency-item">
+                        <h3>Tax Benefits</h3>
+                        <p>All donations are tax-deductible. We issue Section 18A certificates for tax purposes.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -152,6 +204,6 @@
         </div>
     </footer>
 
-     <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

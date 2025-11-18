@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Green Earth Initiative's mission, vision, history, and the team behind our environmental conservation efforts.">
+    <meta name="keywords" content="about us, mission, vision, team, history, environmental organization">
     <title>About Us | Green Earth Initiative</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <h1>Green Earth Initiative</h1>
-            </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Green Earth Initiative</a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,6 +26,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="nav-icons">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -37,8 +48,31 @@
         <section class="history">
             <div class="container">
                 <h2>Our Story</h2>
-                <p>Founded in 2015, Green Earth Initiative began as a small community group in Cape Town focused on local beach cleanups.<br>
-                     Today, we've grown into a national movement with projects spanning tree planting, wildlife conservation, environmental education, and sustainable community development.</p>
+                <p>Founded in 2015, Green Earth Initiative began as a small community group in Cape Town focused on local beach cleanups. Today, we've grown into a national movement with projects spanning tree planting, wildlife conservation, environmental education, and sustainable community development.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-content">
+                            <h3>Foundation</h3>
+                            <p>Started as a community beach cleanup initiative in Cape Town</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h3>Expansion</h3>
+                            <p>Launched tree planting programs and expanded to Johannesburg</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>National Reach</h3>
+                            <p>Became a registered NPO with projects in 3 provinces</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -47,8 +81,7 @@
                 <div class="mv-grid">
                     <div class="mv-card">
                         <h3>Our Mission</h3>
-                        <p>To preserve and restore South Africa's natural environment through collaborative conservation efforts, education, <br>
-                            and empowering communities to become stewards of their local ecosystems.</p>
+                        <p>To preserve and restore South Africa's natural environment through collaborative conservation efforts, education, and empowering communities to become stewards of their local ecosystems.</p>
                     </div>
                     <div class="mv-card">
                         <h3>Our Vision</h3>
@@ -63,19 +96,28 @@
                 <h2>Our Team</h2>
                 <div class="team-grid">
                     <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <h3>Sarah Johnson</h3>
                         <p class="role">Founder & Director</p>
-                        <p>Environmental scientist with 15 years of experience in conservation.</p>
+                        <p>Environmental scientist with 15 years of experience in conservation and community development.</p>
                     </div>
                     <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <h3>David Mbeki</h3>
                         <p class="role">Operations Manager</p>
-                        <p>Specializes in community engagement and project coordination.</p>
+                        <p>Specializes in community engagement and project coordination across multiple regions.</p>
                     </div>
                     <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <h3>Lerato Ndlovu</h3>
                         <p class="role">Education Coordinator</p>
-                        <p>Develops and runs environmental education programs in schools.</p>
+                        <p>Develops and runs environmental education programs in schools and communities.</p>
                     </div>
                 </div>
             </div>
